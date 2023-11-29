@@ -2,6 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
+'''credit to bernd porr'''
+
 # Creates a scrolling data display
 class RealtimePlotWindow:
 
