@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 from plottingWindow import RealtimePlotWindow
 from midiController import MidiGlove
 
-'''TODO: plot the noisy and filtered signals'''
+'''TODO: plot the noisy signals too'''
 
 PORT = Arduino.AUTODETECT
 # PORT = '/dev/ttyUSB0'
