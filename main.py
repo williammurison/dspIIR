@@ -11,12 +11,13 @@ import matplotlib.pyplot as plt
 from plottingWindow import RealtimePlotWindow
 from midiController import MidiGlove
 
-'''TODO: check the sampling rate programatically and plot in plotting window'''
-
 '''TODO: plot the noisy and filtered signals'''
 
 PORT = Arduino.AUTODETECT
 # PORT = '/dev/ttyUSB0'
+
+onThreshold = 0.5
+automationThreshold = 0.7
 
 # Create a plotting window for each analog in
 plot0 = RealtimePlotWindow()
@@ -38,13 +39,11 @@ if available_ports:
 else:
     midiout.open_virtual_port("My virtual output")
 
-onThreshold = 0.5
-automationThreshold = 0.7
-
 baseNote = 60 # middle C
+scale = 'major'
 
 # create a controller
-controller = MidiGlove(midiout, onThreshold, automationThreshold, baseNote)
+controller = MidiGlove(midiout, onThreshold, automationThreshold, baseNote, scale)
 
 # declare the cutoff frequencies
 cutOffs = [0.5]
