@@ -62,34 +62,35 @@ class MidiGlove:
         if self.pinky.switchOn == True:
             binaryNoteList[3] = 1
 
-        # convert this to a binary number
-        proxyBinaryNote = 0
+        # convert this to a base ten int
+        intNote = 0
 
         for idx in binaryNoteList:
-            proxyBinaryNote = 2 * proxyBinaryNote + idx
-        
-        binaryNote = f'0b{str(proxyBinaryNote)}'
+            intNote = 2 * intNote + idx
 
-        if int(binaryNote) == 0:
+        if intNote == 0:
             # when nothing is on no note
             note = None
         else:
             # convert the binary to decimal and then add it to the base note, so octave plus 3 notes
             # minus one since we use 0 for no note
-            note = self.baseNote + int(binaryNote) - 1
+            note = self.baseNote + intNote - 1
 
         #only send messages if the note has changed
         if not note == self.previousNote:
 
-            # end the previous note
-            self.midiout.send_message([0x80, self.previousNote, 50])
+            # end the previous note if it exists
+            if not self.previousNote == None:
+                self.midiout.send_message([0x80, self.previousNote, 50])
 
             # if theres a new note, send it
             if not note == None:
                 self.midiout.send_message([0x90, note, 112])
             
             # store the current note for next time
-            self.previousNote == note
+            self.previousNote = note
+
+            print(note)
 
     def tryAutomation(self):
 

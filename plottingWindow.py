@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
+import time
 
 '''credit to bernd porr'''
 
@@ -12,8 +13,9 @@ class RealtimePlotWindow:
         self.fig, self.ax = plt.subplots()
         # that's our plotbuffer
         self.plotbuffer = np.zeros(500)
-        # create an empty line
-        self.line, = self.ax.plot(self.plotbuffer)
+        # create an empty line and legend
+        self.line, = self.ax.plot(self.plotbuffer, label='Sampling Rate: 0 Hz')
+        self.legend = plt.legend()
         # axis
         self.ax.set_ylim(0, 1.5)
         # That's our ringbuffer which accumluates the samples
@@ -24,8 +26,24 @@ class RealtimePlotWindow:
         # start the animation
         self.ani = animation.FuncAnimation(self.fig, self.update, interval=100)
 
+        # use these to calculate and display the current actual sampling rate
+        self.start = 0
+        self.end = 0
+
     # updates the plot
     def update(self, data):
+
+        # track from the length of time to get back to this function
+        self.end = time.time()
+
+        # calculate the actual sampling rate
+        actualSamplingRate = 1 / (self.end - self.start) # in Hz
+
+        # update the legend to display the sampling rate
+        self.legend.get_texts()[0].set_text(f'Sampling rate: {round(actualSamplingRate, 2)} Hz')
+
+        self.start = time.time()
+
         # add new data to the buffer
         self.plotbuffer = np.append(self.plotbuffer, self.ringbuffer)
         # only keep the 500 newest ones and discard the old ones
@@ -33,6 +51,7 @@ class RealtimePlotWindow:
         self.ringbuffer = []
         # set the new 500 points of channel 9
         self.line.set_ydata(self.plotbuffer)
+
         return self.line,
 
     # appends data to the ringbuffer

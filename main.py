@@ -31,6 +31,8 @@ samplingRate = 100
 midiout = rtmidi.MidiOut()
 available_ports = midiout.get_ports()
 
+print(available_ports)
+
 if available_ports:
     midiout.open_port(0)
 else:
@@ -45,7 +47,7 @@ baseNote = 60 # middle C
 controller = MidiGlove(midiout, onThreshold, automationThreshold, baseNote)
 
 # declare the cutoff frequencies
-cutOffs = [50]
+cutOffs = [0.5]
 
 # create filter coefficients and filter object
 sos = signal.butter(4, cutOffs, 'lowpass', output='sos')
@@ -55,7 +57,7 @@ filterObject = iir_filter.IIR_filter(sos)
 def callBack0(data):
 
     # filter the data
-    data = filterObject.dofilter(data)
+    # data = filterObject.dofilter(data)
 
     # turn on or off the note if necessary
     controller.index.updateStatus(data)
@@ -69,18 +71,17 @@ def callBack0(data):
     plot0.addData(data)
 
 def callBack1(data):
-    data = filterObject.dofilter(data)
+    # data = filterObject.dofilter(data)
     controller.middle.updateStatus(data)
     plot1.addData(data)
 
 def callBack2(data):
-
-    data = filterObject.dofilter(data)
+    # data = filterObject.dofilter(data)
     controller.ring.updateStatus(data)
     plot2.addData(data)
 
 def callBack3(data):
-    data = filterObject.dofilter(data)
+    # data = filterObject.dofilter(data)
     controller.pinky.updateStatus(data)
     plot3.addData(data)
 
