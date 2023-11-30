@@ -68,11 +68,41 @@ class RealtimePlotWindow:
         try:
             actualSamplingRate = 1 / (self.end - self.start) # in Hz
         except ZeroDivisionError:
-            actualSamplingRate = 0
-
-        # update the legend to display the sampling rate
-        self.legend.get_texts()[0].set_text(f'Sampling rate: {round(actualSamplingRate, 2)} Hz')
-
+            actualSamplingRate = None
+        
         self.start = time.time()
 
+        # update the legend to display the sampling rate
+        if not actualSamplingRate == None:
+            self.legend.get_texts()[2].set_text(f'Sampling rate: {str(actualSamplingRate)[:6]} Hz') #dont want it to be longer than 6 digits
+
         self.ringbuffer.append(v)
+
+        # color the background accordingly
+        if v > self.automationThresholdArray[0]:
+            
+            automationRange = 1 - self.automationThresholdArray[0]
+
+            # map v from automation range to 0 - 1 (0 - 0.3 to 0 - 1)
+            colorBlend = (v - self.automationThresholdArray[0]) / automationRange
+
+            # find a color between these two based on the value of v
+            col1 = [0.70,1.00,0.40] # green
+            col2 = [0.0,1.0,0.0] # dark green
+
+            r = (col1[0] * (1 - colorBlend) + col2[0] * colorBlend)
+            g = (col1[1] * (1 - colorBlend) + col2[1] * colorBlend)
+            b = (col1[2] * (1 - colorBlend) + col2[2] * colorBlend)
+
+            self.fig.patch.set_facecolor((r,g,b))
+            self.ax.patch.set_facecolor((r,g,b))
+
+        elif v > self.onThresholdArray[0]:
+
+            self.fig.patch.set_facecolor((0.70,1.00,0.40)) # green in rgb
+            self.ax.patch.set_facecolor((0.70,1.00,0.40))
+
+        else:
+
+            self.fig.patch.set_facecolor('snow')
+            self.ax.patch.set_facecolor('snow')
