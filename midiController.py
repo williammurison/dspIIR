@@ -29,7 +29,7 @@ class MidiSlider:
 
 class MidiGlove:
 
-    def __init__(self, midiout, onThreshold, automationThreshold, baseNote):
+    def __init__(self, midiout, onThreshold, automationThreshold, baseNote, scale):
 
         self.midiout = midiout
 
@@ -42,25 +42,40 @@ class MidiGlove:
         self.ring = MidiSlider(onThreshold)
         self.pinky = MidiSlider(onThreshold)
 
-        # middle C
-        self.baseNote = baseNote
-
         # current note
         self.previousNote = None
+        
+        self.baseNote = baseNote
+
+        # scale spacing arrays
+        linear = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+        major = [0, 2, 4, 5, 7, 9, 11, 12, 14, 16, 17, 19, 21, 23, 24]
+        minor = [0, 2, 3, 5, 7, 8, 10, 12, 14, 15, 17, 19, 20, 22, 24]#[0, , , , , , , , , , , , , ]
+        blues = [0, 3, 5, 6, 7, 10, 12, 15, 17, 18, 19, 21, 24, 27, 29]#[0, , , , , , , , , , , , , ]
+
+        if scale == 'major':
+            self.scale = major
+        elif scale == 'minor':
+            self.scale = minor
+        elif scale == 'blues':
+            self.scale = blues
+        else:
+            self.scale = linear
 
     def updateMessages(self):
 
-        # store which sliders are on in a list
+        # store which sliders are on as a binary number in a list
+        # pinky on left, index on right (left hand)
         binaryNoteList = [0, 0, 0, 0]
 
         if self.index.switchOn == True:
-            binaryNoteList[0] = 1
-        if self.middle.switchOn == True:
-            binaryNoteList[1] = 1
-        if self.ring.switchOn == True:
-            binaryNoteList[2] = 1
-        if self.pinky.switchOn == True:
             binaryNoteList[3] = 1
+        if self.middle.switchOn == True:
+            binaryNoteList[2] = 1
+        if self.ring.switchOn == True:
+            binaryNoteList[1] = 1
+        if self.pinky.switchOn == True:
+            binaryNoteList[0] = 1
 
         # convert this to a base ten int
         intNote = 0
@@ -72,9 +87,9 @@ class MidiGlove:
             # when nothing is on no note
             note = None
         else:
-            # convert the binary to decimal and then add it to the base note, so octave plus 3 notes
-            # minus one since we use 0 for no note
-            note = self.baseNote + intNote - 1
+            # convert the binary to decimal and then use that as the index of the
+            # scale spacing arrays, minus one since we use 0 for no note
+            note = self.baseNote + self.scale[intNote - 1]
 
         #only send messages if the note has changed
         if not note == self.previousNote:
@@ -90,7 +105,7 @@ class MidiGlove:
             # store the current note for next time
             self.previousNote = note
 
-            print(note)
+            print(f'{binaryNoteList} - {note}')
 
     def tryAutomation(self):
 
@@ -113,7 +128,7 @@ class MidiGlove:
 
             automationRange = 1 - self.automationThreshold
 
-            # convert from range of data to range of midi (0 - 0.3 to 0 - 126)
+            # map largestData from automation range to range of midi (0 - 0.3 to 0 - 126)
             mod = int((largestData - self.automationThreshold) / automationRange * 126)
 
             # send the message, controlling modulatoin in this case

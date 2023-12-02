@@ -11,18 +11,35 @@ import matplotlib.pyplot as plt
 from plottingWindow import RealtimePlotWindow
 from midiController import MidiGlove
 
-'''TODO: check the sampling rate programatically and plot in plotting window'''
-
-'''TODO: plot the noisy and filtered signals'''
+'''TODO: plot the noisy signals too'''
 
 PORT = Arduino.AUTODETECT
 # PORT = '/dev/ttyUSB0'
 
+onThreshold = 0.5
+automationThreshold = 0.7
+
 # Create a plotting window for each analog in
-plot0 = RealtimePlotWindow()
-plot1 = RealtimePlotWindow()
-plot2 = RealtimePlotWindow()
-plot3 = RealtimePlotWindow()
+plot0 = RealtimePlotWindow(onThreshold, automationThreshold)
+plot1 = RealtimePlotWindow(onThreshold, automationThreshold)
+plot2 = RealtimePlotWindow(onThreshold, automationThreshold)
+plot3 = RealtimePlotWindow(onThreshold, automationThreshold)
+
+# resolution of monitors for putting the plots in nice places
+resolutionX = 1920
+resolutionY = 1080
+
+# in pixels, want quadrants for half width and height
+figWidth = int(resolutionX / 2)
+figHeight = int(resolutionY / 2)
+
+pad = 50
+
+# one plot per quadrant of the screen
+plot0.fig.canvas.manager.window.setGeometry(int(pad/2), int(pad/2), figWidth - pad, figHeight - pad)
+plot1.fig.canvas.manager.window.setGeometry(figWidth + int(pad/2), int(pad/2), figWidth - pad, figHeight - pad)
+plot2.fig.canvas.manager.window.setGeometry(int(pad/2), figHeight + int(pad/2), figWidth - pad, figHeight - pad)
+plot3.fig.canvas.manager.window.setGeometry(figWidth + int(pad/2), figHeight + int(pad/2), figWidth - pad, figHeight - pad)
 
 # sampling rate: 100Hz
 samplingRate = 100
@@ -38,13 +55,11 @@ if available_ports:
 else:
     midiout.open_virtual_port("My virtual output")
 
-onThreshold = 0.5
-automationThreshold = 0.7
-
 baseNote = 60 # middle C
+scale = 'major'
 
 # create a controller
-controller = MidiGlove(midiout, onThreshold, automationThreshold, baseNote)
+controller = MidiGlove(midiout, onThreshold, automationThreshold, baseNote, scale)
 
 # declare the cutoff frequencies
 cutOffs = [0.5]
