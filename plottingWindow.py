@@ -13,8 +13,9 @@ class RealtimePlotWindow:
         # create a plot window
         self.fig, self.ax = plt.subplots()
 
-        # that's our plotbuffer
-        self.plotbuffer = np.zeros(500)
+        # that's our plotbuffers
+        self.plotbufferClean = np.zeros(500)
+        self.plotbufferNoisy = np.zeros(500)
 
         # plot the thresholds as lines
         self.onThresholdArray = np.ones(500) * onThreshold
@@ -23,17 +24,19 @@ class RealtimePlotWindow:
         self.onThresholdLine = self.ax.plot(self.onThresholdArray, label='On Threshold')
         self.automationThresholdLine = self.ax.plot(self.automationThresholdArray, label='Automation Threshold')
 
-        # create an empty line and legend
-        self.line, = self.ax.plot(self.plotbuffer, label='Sampling Rate: 0 Hz')
+        # create empty lines and legend
+        self.lineNoisy, = self.ax.plot(self.plotbufferNoisy, label='Noisy Signal')
+        self.lineClean, = self.ax.plot(self.plotbufferClean, label='CleanSignal\n\nSampling Rate: 0 Hz')
         self.legend = plt.legend()
 
         # axis
         self.ax.set_ylim(0, 1.5)
 
-        # That's our ringbuffer which accumluates the samples
+        # That's our ringbuffers which accumluates the samples
         # It's emptied every time when the plot window below
         # does a repaint
-        self.ringbuffer = []
+        self.ringbufferClean = []
+        self.ringbufferNoisy = []
 
         # add any initialisation code here (filters etc)
         # start the animation
@@ -46,20 +49,24 @@ class RealtimePlotWindow:
     # updates the plot
     def update(self, data):
 
-        # add new data to the buffer
-        self.plotbuffer = np.append(self.plotbuffer, self.ringbuffer)
+        # add new data to the buffers
+        self.plotbufferClean = np.append(self.plotbufferClean, self.ringbufferClean)
+        self.plotbufferNoisy = np.append(self.plotbufferNoisy, self.ringbufferNoisy)
 
         # only keep the 500 newest ones and discard the old ones
-        self.plotbuffer = self.plotbuffer[-500:]
-        self.ringbuffer = []
+        self.plotbufferClean = self.plotbufferClean[-500:]
+        self.ringbufferClean = []
+        self.plotbufferNoisy = self.plotbufferNoisy[-500:]
+        self.ringbufferNoisy = []
 
         # set the new 500 points of channel 9
-        self.line.set_ydata(self.plotbuffer)
+        self.lineClean.set_ydata(self.plotbufferClean)
+        self.lineNoisy.set_ydata(self.plotbufferNoisy)
 
-        return self.line,
+        return [self.lineClean, self.lineNoisy],
 
     # appends data to the ringbuffer
-    def addData(self, v):
+    def addData(self, clean, noisy):
 
         # track from the length of time to get back to this function
         self.end = time.time()
@@ -74,17 +81,18 @@ class RealtimePlotWindow:
 
         # update the legend to display the sampling rate
         if not actualSamplingRate == None:
-            self.legend.get_texts()[2].set_text(f'Sampling rate: {str(actualSamplingRate)[:6]} Hz') #dont want it to be longer than 6 digits
+            self.legend.get_texts()[3].set_text(f'CleanSignal\n\nSampling Rate: {str(actualSamplingRate)[:6]} Hz') #dont want it to be longer than 6 digits
 
-        self.ringbuffer.append(v)
+        self.ringbufferClean.append(clean)
+        self.ringbufferNoisy.append(noisy)
 
         # color the background accordingly
-        if v > self.automationThresholdArray[0]:
+        if clean > self.automationThresholdArray[0]:
             
             automationRange = 1 - self.automationThresholdArray[0]
 
             # map v from automation range to 0 - 1 (0 - 0.3 to 0 - 1)
-            colorBlend = (v - self.automationThresholdArray[0]) / automationRange
+            colorBlend = (clean - self.automationThresholdArray[0]) / automationRange
 
             # find a color between these two based on the value of v
             col1 = [0.70,1.00,0.40] # green
@@ -97,7 +105,7 @@ class RealtimePlotWindow:
             self.fig.patch.set_facecolor((r,g,b))
             self.ax.patch.set_facecolor((r,g,b))
 
-        elif v > self.onThresholdArray[0]:
+        elif clean > self.onThresholdArray[0]:
 
             self.fig.patch.set_facecolor((0.70,1.00,0.40)) # green in rgb
             self.ax.patch.set_facecolor((0.70,1.00,0.40))

@@ -11,8 +11,6 @@ import matplotlib.pyplot as plt
 from plottingWindow import RealtimePlotWindow
 from midiController import MidiGlove
 
-'''TODO: plot the noisy signals too'''
-
 PORT = Arduino.AUTODETECT
 # PORT = '/dev/ttyUSB0'
 
@@ -41,14 +39,14 @@ plot1.fig.canvas.manager.window.setGeometry(figWidth + int(pad/2), int(pad/2), f
 plot2.fig.canvas.manager.window.setGeometry(int(pad/2), figHeight + int(pad/2), figWidth - pad, figHeight - pad)
 plot3.fig.canvas.manager.window.setGeometry(figWidth + int(pad/2), figHeight + int(pad/2), figWidth - pad, figHeight - pad)
 
-# sampling rate: 100Hz
+# sampling rate: 1000Hz
 samplingRate = 100
 
-#synth connection
+# synth connection
 midiout = rtmidi.MidiOut()
 available_ports = midiout.get_ports()
 
-print(available_ports)
+#print(available_ports)
 
 if available_ports:
     midiout.open_port(0)
@@ -61,21 +59,24 @@ scale = 'major'
 # create a controller
 controller = MidiGlove(midiout, onThreshold, automationThreshold, baseNote, scale)
 
-# declare the cutoff frequencies
-cutOffs = [0.5]
+# declare the lowpass cutoff frequency in Hz
+cutOff = 20
 
 # create filter coefficients and filter object
-sos = signal.butter(4, cutOffs, 'lowpass', output='sos')
-filterObject = iir_filter.IIR_filter(sos)
+sos = signal.butter(4, cutOff/samplingRate * 2, 'lowpass', output='sos')
+indexFilter = iir_filter.IIR_filter(sos)
+middleFilter = iir_filter.IIR_filter(sos)
+ringFilter = iir_filter.IIR_filter(sos)
+pinkyFilter = iir_filter.IIR_filter(sos)
 
 # called for every new sample which has arrived from the relevant port
 def callBack0(data):
 
     # filter the data
-    # data = filterObject.dofilter(data)
+    cleanData = indexFilter.filter(data)
 
     # turn on or off the note if necessary
-    controller.index.updateStatus(data)
+    controller.index.updateStatus(cleanData)
 
     # update the messages and try to do automation
     # only need to call this in one call back as the function checks all the slider values
@@ -83,22 +84,22 @@ def callBack0(data):
     controller.tryAutomation()
 
     # update the plot
-    plot0.addData(data)
+    plot0.addData(cleanData, data)
 
 def callBack1(data):
-    # data = filterObject.dofilter(data)
-    controller.middle.updateStatus(data)
-    plot1.addData(data)
+    cleanData = middleFilter.filter(data)
+    controller.middle.updateStatus(cleanData)
+    plot1.addData(cleanData, data)
 
 def callBack2(data):
-    # data = filterObject.dofilter(data)
-    controller.ring.updateStatus(data)
-    plot2.addData(data)
+    cleanData = ringFilter.filter(data)
+    controller.ring.updateStatus(cleanData)
+    plot2.addData(cleanData, data)
 
 def callBack3(data):
-    # data = filterObject.dofilter(data)
-    controller.pinky.updateStatus(data)
-    plot3.addData(data)
+    cleanData = pinkyFilter.filter(data)
+    controller.pinky.updateStatus(cleanData)
+    plot3.addData(cleanData, data)
 
 # Get the Ardunio board.
 board = Arduino(PORT)
