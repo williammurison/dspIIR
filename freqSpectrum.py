@@ -10,7 +10,7 @@ from midiController import MidiSlider
 ''' read and record one analog in for a specified length in seconds and create the fft of it
     so that the cutoff freq required for the real time filtering can be determined'''
 
-class dataStorage():
+class DataStorage():
     
     def __init__(self, samplingRate, lengthSeconds):
 

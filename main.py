@@ -39,7 +39,7 @@ pad = 50
 # plot2.fig.canvas.manager.window.setGeometry(int(pad/2), figHeight + int(pad/2), figWidth - pad, figHeight - pad)
 # plot3.fig.canvas.manager.window.setGeometry(figWidth + int(pad/2), figHeight + int(pad/2), figWidth - pad, figHeight - pad)
 
-# sampling rate: 1000Hz
+# max sampling rate: 1000Hz
 samplingRate = 100
 
 # synth connection
