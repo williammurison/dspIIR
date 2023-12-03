@@ -26,7 +26,7 @@ class RealtimePlotWindow:
 
         # create empty lines and legend
         self.lineNoisy, = self.ax.plot(self.plotbufferNoisy, label='Noisy Signal')
-        self.lineClean, = self.ax.plot(self.plotbufferClean, label='CleanSignal\n\nSampling Rate: 0 Hz')
+        self.lineClean, = self.ax.plot(self.plotbufferClean, label='CleanSignal\nSampling Rate: 0 Hz')
         self.legend = plt.legend()
 
         # axis
@@ -81,7 +81,7 @@ class RealtimePlotWindow:
 
         # update the legend to display the sampling rate
         if not actualSamplingRate == None:
-            self.legend.get_texts()[3].set_text(f'CleanSignal\n\nSampling Rate: {str(actualSamplingRate)[:6]} Hz') #dont want it to be longer than 6 digits
+            self.legend.get_texts()[3].set_text(f'CleanSignal\nSampling Rate: {str(actualSamplingRate)[:6]} Hz') #dont want it to be longer than 6 digits
 
         self.ringbufferClean.append(clean)
         self.ringbufferNoisy.append(noisy)
