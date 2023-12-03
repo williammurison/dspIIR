@@ -47,6 +47,14 @@ class dataStorage():
             self.line.set_ydata(dbData)
             self.ax.set_ylim(min(dbData) * 1.1, max(dbData) * 1.1)
 
+            # saving figs
+            import os
+            def getRelPath(name):
+                return str(os.path.join(os.path.dirname(__file__), os.path.abspath(name)))
+
+            self.fig.savefig(getRelPath(f"figs/freqPlot.svg"), format='svg', dpi=1200)
+            needs to be called to close the serial port
+
 PORT = Arduino.AUTODETECT
 
 # sampling rate: 100Hz
@@ -70,13 +78,5 @@ board.analog[0].register_callback(callBack)
 board.analog[0].enable_reporting()
 
 plt.show()
-
-# saving figs
-import os
-def getRelPath(name):
-    return str(os.path.join(os.path.dirname(__file__), os.path.abspath(name)))
-
-fig2.savefig(getRelPath(f"figs/freqPlot.svg"), format='svg', dpi=1200)
-needs to be called to close the serial port
 
 board.exit()
