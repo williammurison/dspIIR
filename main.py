@@ -60,7 +60,7 @@ scale = 'major'
 controller = MidiGlove(midiout, onThreshold, automationThreshold, baseNote, scale)
 
 # declare the lowpass cutoff frequency in Hz
-cutOff = 20
+cutOff = 5
 
 # create filter coefficients and filter object
 sos = signal.butter(4, cutOff/samplingRate * 2, 'lowpass', output='sos')

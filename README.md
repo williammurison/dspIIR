@@ -62,7 +62,9 @@ To determine the cutoff frequency required for your pots, run freqSpectrum.py af
 
 ![Sample freqPlot](./figs/freqPlot.svg)
 
-Generally 10 - 20 Hz is advised as it is unlikely any user interaction would happen at a higher frequency than this.
+Generally 5 Hz is advised as it is unlikely any user interaction would happen at a higher frequency than this and removed the noisy frequencies. Lower cutoffs than this can introduce delay.
+
+![Sample freqPlot](./figs/freqPlotAnnotated.svg)
 
 The activation thresholds for turning a slider to be recognized as 'on' and the threshold for modulation can both be changed in main.py. The scale spacing of the notes and base note can also be changed in main.py.
 
