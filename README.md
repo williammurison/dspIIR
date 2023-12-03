@@ -46,16 +46,19 @@ This module requires the following modules which should be installed to the pyth
 ## Hardware
 
 The necessary circuit schematic can be observed below:
-![DFD](./figs/schematic.svg)
+![Schematic](./figs/schematic.svg)
 
-The potentiometers P1 - P4 can be any resistance and physical dimension and should be decided on depending on the design desired. Standard pots on a breadboard work well, but linear sliding pots can also be constructed using /CAD/.
+The potentiometers P1 - P4 can be any resistance and physical dimension and should be decided on depending on the design desired. Standard pots on a breadboard work well, but linear sliding pots can also be constructed using `/CAD/table_sliders` if desired. This implementatin could look as below:
 
-
+![Sliders](./figs/schematic.svg)
 
 ## Filter, Threshold and Scale Configuration
 
-1. Enable the module at Administration > Extend.
-1. Profit.
+To determine the cutoff frequency required for your pots, run freqSpectrum.py after connecting a pot to 5V, GND and A0. The FFT of your signal will be output to `/figs/freqPlot.svg` and can be used to determine the filter cutoff, if necessary. An example with a spike at 50 Hz from mains noise can be observed below:
+
+![Sample freqPlot](./figs/freqPlot.svg)
+
+Generally 10 - 20 Hz is advised as it is unlikely any user interaction would happen at a higher frequency than this.
 
 
 ## Running the Software
