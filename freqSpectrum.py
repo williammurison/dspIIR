@@ -66,7 +66,7 @@ samplingRate = 100
 
 length = 20 # seconds
 
-dataStore = dataStorage(samplingRate, length)
+dataStore = DataStorage(samplingRate, length)
 
 def callBack(data):
     dataStore.addData(data)
