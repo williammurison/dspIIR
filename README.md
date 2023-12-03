@@ -48,7 +48,11 @@ This module requires the following modules which should be installed to the pyth
 The necessary circuit schematic can be observed below:
 ![Schematic](./figs/schematic.svg)
 
-The potentiometers P1 - P4 can be any resistance and physical dimension and should be decided on depending on the design desired. Standard pots on a breadboard work well, but linear sliding pots can also be constructed using `/CAD/table_sliders` if desired. This implementatin could look as below:
+The arduino should be connected to the computer which will be runnning the software.
+
+The potentiometers P1 - P4 can be any resistance and physical dimension and should be decided on depending on the design desired. Standard pots on a breadboard work well, but linear sliding pots can also be constructed using `/CAD/table_sliders`, card stock, graphite, aluminum foil, blue tac or glue and 16 2M screws if desired. Both of these implementations are pictured below:
+
+![Breadboard](./figs/sliders.png)
 
 ![Sliders](./figs/sliders.png)
 
@@ -60,6 +64,7 @@ To determine the cutoff frequency required for your pots, run freqSpectrum.py af
 
 Generally 10 - 20 Hz is advised as it is unlikely any user interaction would happen at a higher frequency than this.
 
+The activation thresholds for turning a slider to be recognized as 'on' and the threshold for modulation can both be changed in main.py. The scale spacing of the notes and base note can also be changed in main.py.
 
 ## Running the Software
 

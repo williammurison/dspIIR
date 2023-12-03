@@ -23,6 +23,8 @@ class dataStorage():
         # create a plot window
         self.fig, self.ax = plt.subplots()
         self.ax.set_xscale('log')
+        self.ax.set_xlabel('Frequency (Hz)')
+        self.ax.set_ylabel('Amplitude (dB)')
         
         # empty plot
         self.freqAxis = np.linspace(0, self.samplingRate / 2, int(self.length/2))
