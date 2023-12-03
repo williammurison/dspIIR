@@ -71,8 +71,12 @@ board.analog[0].enable_reporting()
 
 plt.show()
 
-# save fig as an svg
-plt.savefig(f"{str(os.path.join(os.path.dirname(__file__), os.path.abspath(name)))}/figs/freqPlot.svg", format="svg")
+# saving figs
+import os
+def getRelPath(name):
+    return str(os.path.join(os.path.dirname(__file__), os.path.abspath(name)))
 
-# needs to be called to close the serial port
+fig2.savefig(getRelPath(f"figs/freqPlot.svg"), format='svg', dpi=1200)
+needs to be called to close the serial port
+
 board.exit()
