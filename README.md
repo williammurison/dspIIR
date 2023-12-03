@@ -50,7 +50,7 @@ The necessary circuit schematic can be observed below:
 
 The potentiometers P1 - P4 can be any resistance and physical dimension and should be decided on depending on the design desired. Standard pots on a breadboard work well, but linear sliding pots can also be constructed using `/CAD/table_sliders` if desired. This implementatin could look as below:
 
-![Sliders](./figs/schematic.svg)
+![Sliders](./figs/sliders.png)
 
 ## Filter, Threshold and Scale Configuration
 

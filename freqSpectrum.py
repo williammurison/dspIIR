@@ -53,8 +53,10 @@ class dataStorage():
                 return str(os.path.join(os.path.dirname(__file__), os.path.abspath(name)))
 
             self.fig.savefig(getRelPath(f"figs/freqPlot.svg"), format='svg', dpi=1200)
-            needs to be called to close the serial port
 
+            self.length = 0 # just to stop it running more
+
+# needs to be called to close the serial port
 PORT = Arduino.AUTODETECT
 
 # sampling rate: 100Hz
