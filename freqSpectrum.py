@@ -71,5 +71,8 @@ board.analog[0].enable_reporting()
 
 plt.show()
 
+# save fig as an svg
+plt.savefig("./figs/freqPlot.svg", format="svg")
+
 # needs to be called to close the serial port
 board.exit()
