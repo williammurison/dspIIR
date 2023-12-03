@@ -34,10 +34,10 @@ figHeight = int(resolutionY / 2)
 pad = 50
 
 # one plot per quadrant of the screen
-plot0.fig.canvas.manager.window.setGeometry(int(pad/2), int(pad/2), figWidth - pad, figHeight - pad)
-plot1.fig.canvas.manager.window.setGeometry(figWidth + int(pad/2), int(pad/2), figWidth - pad, figHeight - pad)
-plot2.fig.canvas.manager.window.setGeometry(int(pad/2), figHeight + int(pad/2), figWidth - pad, figHeight - pad)
-plot3.fig.canvas.manager.window.setGeometry(figWidth + int(pad/2), figHeight + int(pad/2), figWidth - pad, figHeight - pad)
+# plot0.fig.canvas.manager.window.setGeometry(int(pad/2), int(pad/2), figWidth - pad, figHeight - pad)
+# plot1.fig.canvas.manager.window.setGeometry(figWidth + int(pad/2), int(pad/2), figWidth - pad, figHeight - pad)
+# plot2.fig.canvas.manager.window.setGeometry(int(pad/2), figHeight + int(pad/2), figWidth - pad, figHeight - pad)
+# plot3.fig.canvas.manager.window.setGeometry(figWidth + int(pad/2), figHeight + int(pad/2), figWidth - pad, figHeight - pad)
 
 # sampling rate: 1000Hz
 samplingRate = 100
