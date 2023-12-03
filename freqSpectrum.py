@@ -5,8 +5,6 @@ import matplotlib.pyplot as plt
 
 import matplotlib.animation as animation
 
-from midiController import MidiSlider
-
 ''' read and record one analog in for a specified length in seconds and create the fft of it
     so that the cutoff freq required for the real time filtering can be determined'''
 
