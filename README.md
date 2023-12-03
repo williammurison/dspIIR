@@ -5,7 +5,7 @@ This project uses the binary combination of four potentiometers to select and se
 Printable CAD files and circuit schematics are provided below.
 
 For a video demonstration of this project:
-[demo video](https://www.drupal.org/project/admin_menu)
+[demo video](https://www.youtube.com)
 
 
 ## Table of contents
@@ -52,7 +52,7 @@ The arduino should be connected to the computer which will be runnning the softw
 
 The potentiometers P1 - P4 can be any resistance and physical dimension and should be decided on depending on the design desired. Standard pots on a breadboard work well, but linear sliding pots can also be constructed using `/CAD/table_slider`, card stock, graphite, aluminum foil, blue tac or glue and 16 2M screws if desired. Both of these implementations are pictured below:
 
-![Breadboard](./figs/sliders.png)
+![Breadboard](./figs/breadboard.png)
 
 ![Sliders](./figs/sliders.png)
 
