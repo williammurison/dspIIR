@@ -52,9 +52,9 @@ The arduino should be connected to the computer which will be runnning the softw
 
 The potentiometers P1 - P4 can be any resistance and physical dimension and should be decided on depending on the design desired. Standard pots on a breadboard work well, but linear sliding pots can also be constructed using `/CAD/table_slider`, card stock, graphite, aluminum foil, blue tac or glue and 16 2M screws if desired. Both of these implementations are pictured below:
 
-![Breadboard](./figs/breadboard.png)
+![Breadboard](./figs/breadboard.jpg)
 
-![Sliders](./figs/sliders.png)
+![Sliders](./figs/sliders.jpg)
 
 ## Filter, Threshold and Scale Configuration
 
