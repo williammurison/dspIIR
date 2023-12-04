@@ -20,9 +20,13 @@ class DataStorage():
 
         # create a plot window
         self.fig, self.ax = plt.subplots()
+
         self.ax.set_xscale('log')
         self.ax.set_xlabel('Frequency (Hz)')
         self.ax.set_ylabel('Amplitude (dB)')
+
+        # connect close event to saving plot
+        self.fig.canvas.mpl_connect('close_event', self.saveFig)
         
         # empty plot
         self.freqAxis = np.linspace(0, self.samplingRate / 2, int(self.length/2))
@@ -47,14 +51,16 @@ class DataStorage():
             self.line.set_ydata(dbData)
             self.ax.set_ylim(min(dbData) * 1.1, max(dbData) * 1.1)
 
-            # saving figs
-            import os
-            def getRelPath(name):
-                return str(os.path.join(os.path.dirname(__file__), os.path.abspath(name)))
-
-            self.fig.savefig(getRelPath(f"figs/freqPlot.svg"), format='svg', dpi=1200)
-
             self.length = 0 # just to stop it running more
+
+    def saveFig(self, event):
+
+        # saving figs
+        import os
+        def getRelPath(name):
+            return str(os.path.join(os.path.dirname(__file__), os.path.abspath(name)))
+
+        self.fig.savefig(getRelPath("figs/freqPlot.svg"), format='svg', dpi=1200)
 
 # needs to be called to close the serial port
 PORT = Arduino.AUTODETECT

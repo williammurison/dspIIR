@@ -8,10 +8,11 @@ import time
 # Creates a scrolling data display
 class RealtimePlotWindow:
 
-    def __init__(self, onThreshold, automationThreshold):
+    def __init__(self, onThreshold, automationThreshold, figureName):
 
         # create a plot window
         self.fig, self.ax = plt.subplots()
+        self.ax.set_title(figureName)
 
         # that's our plotbuffers
         self.plotbufferClean = np.zeros(500)
@@ -28,6 +29,11 @@ class RealtimePlotWindow:
         self.lineNoisy, = self.ax.plot(self.plotbufferNoisy, label='Noisy Signal')
         self.lineClean, = self.ax.plot(self.plotbufferClean, label='CleanSignal\nSampling Rate: 0 Hz')
         self.legend = plt.legend()
+
+        
+        # connect close event to saving plot
+        self.figName = figureName
+        self.fig.canvas.mpl_connect('close_event', self.saveFig)
 
         # axis
         self.ax.set_ylim(0, 1.5)
@@ -114,3 +120,12 @@ class RealtimePlotWindow:
 
             self.fig.patch.set_facecolor('snow')
             self.ax.patch.set_facecolor('snow')
+
+    def saveFig(self, event):
+
+        # saving figs
+        import os
+        def getRelPath(name):
+            return str(os.path.join(os.path.dirname(__file__), os.path.abspath(name)))
+
+        self.fig.savefig(getRelPath(f"figs/{self.figName}.svg"), format='svg', dpi=1200)
