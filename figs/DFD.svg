@@ -25,7 +25,7 @@
      inkscape:deskcolor="#505050"
      inkscape:zoom="1.4428822"
      inkscape:cx="261.97565"
-     inkscape:cy="284.84654"
+     inkscape:cy="285.5396"
      inkscape:window-width="1858"
      inkscape:window-height="1057"
      inkscape:window-x="54"
@@ -35,6 +35,18 @@
      showgrid="false" />
   <defs
      id="defs2">
+    <rect
+       x="566.22779"
+       y="368.01341"
+       width="69.305727"
+       height="24.257004"
+       id="rect1037" />
+    <rect
+       x="565.53473"
+       y="200.98661"
+       width="94.255789"
+       height="64.454326"
+       id="rect770" />
     <style
        type="text/css"
        id="style1">ul { margin-top: 0px; margin-bottom: 10px; }
@@ -55,6 +67,42 @@ a { color: #007bff; }
        id="style2">@import url(&quot;https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap&quot;);
 @import url(&quot;https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap&quot;);
 </style>
+    <rect
+       x="565.53473"
+       y="200.9866"
+       width="94.255791"
+       height="64.454323"
+       id="rect770-8" />
+    <rect
+       x="565.53473"
+       y="200.9866"
+       width="94.255791"
+       height="64.454323"
+       id="rect770-8-5" />
+    <rect
+       x="565.53473"
+       y="200.9866"
+       width="94.255791"
+       height="64.454323"
+       id="rect770-8-5-1" />
+    <rect
+       x="565.53473"
+       y="200.9866"
+       width="94.255791"
+       height="64.454323"
+       id="rect770-8-5-1-3" />
+    <rect
+       x="565.53473"
+       y="200.9866"
+       width="94.255791"
+       height="64.454323"
+       id="rect770-8-5-1-3-9" />
+    <rect
+       x="565.53473"
+       y="200.9866"
+       width="94.255791"
+       height="64.454323"
+       id="rect770-8-5-1-3-9-3" />
   </defs>
   <rect
      style="fill:#ffffff;stroke:none;stroke-width:2.03062"
@@ -363,59 +411,6 @@ a { color: #007bff; }
     </g>
     <g
        shape-node=""
-       text-node=""
-       id="g20">
-      <g
-         cell-id="0MTmTOrP9secJRXI58nm-4"
-         transform="translate(-0.5 -0.5)"
-         id="g19">
-        <switch
-           cell-id="0MTmTOrP9secJRXI58nm-4"
-           id="switch18">
-          <foreignObject
-             cell-id="0MTmTOrP9secJRXI58nm-4"
-             style="overflow: visible; text-align: left;"
-             pointer-events="none"
-             width="100%"
-             height="100%"
-             requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-            <xhtml:div
-               style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 106px; height: 1px; padding-top: 354px; margin-left: 415px;">
-              <xhtml:div
-                 style="box-sizing: border-box; font-size: 0; text-align: center; ">
-                <xhtml:div
-                   ani=""
-                   style="display: inline-block; font-size: 12px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; word-break: break-word; white-space: normal; word-wrap: normal; ">Determine Slider States</xhtml:div>
-              </xhtml:div>
-            </xhtml:div>
-          </foreignObject>
-          <svg
-             width="100%"
-             height="100%"
-             version="1.1"
-             id="svg18">
-            <defs
-               id="defs18">
-              <path
-                 id="zOh.DDGACeQYjQF2"
-                 d="M415,352.209375 h106 M415,366.609375 h106" />
-            </defs>
-            <text
-               fill="rgb(0, 0, 0)"
-               font-size="12px"
-               font-family="Helvetica, &quot;VP Default&quot;"
-               font-weight="400"
-               id="text18"><textPath
-                 xlink:href="#zOh.DDGACeQYjQF2"
-                 id="textPath18"><tspan
-                   xml:space="preserve"
-                   id="tspan18">Determine Slider States</tspan></textPath></text>
-          </svg>
-        </switch>
-      </g>
-    </g>
-    <g
-       shape-node=""
        id="g24">
       <rect
          cell-id="0MTmTOrP9secJRXI58nm-5"
@@ -475,59 +470,6 @@ a { color: #007bff; }
          stroke-miterlimit="10"
          pointer-events="all"
          id="path24" />
-    </g>
-    <g
-       shape-node=""
-       text-node=""
-       id="g26">
-      <g
-         cell-id="0MTmTOrP9secJRXI58nm-5"
-         transform="translate(-0.5 -0.5)"
-         id="g25">
-        <switch
-           cell-id="0MTmTOrP9secJRXI58nm-5"
-           id="switch24">
-          <foreignObject
-             cell-id="0MTmTOrP9secJRXI58nm-5"
-             style="overflow: visible; text-align: left;"
-             pointer-events="none"
-             width="100%"
-             height="100%"
-             requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-            <xhtml:div
-               style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 106px; height: 1px; padding-top: 520px; margin-left: 415px;">
-              <xhtml:div
-                 style="box-sizing: border-box; font-size: 0; text-align: center; ">
-                <xhtml:div
-                   ani=""
-                   style="display: inline-block; font-size: 12px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; word-break: break-word; white-space: normal; word-wrap: normal; ">Determine Midi Note</xhtml:div>
-              </xhtml:div>
-            </xhtml:div>
-          </foreignObject>
-          <svg
-             width="100%"
-             height="100%"
-             version="1.1"
-             id="svg24">
-            <defs
-               id="defs24">
-              <path
-                 id="zOh.DDGACeQYjQF3"
-                 d="M415,518.209375 h106 M415,532.609375 h106" />
-            </defs>
-            <text
-               fill="rgb(0, 0, 0)"
-               font-size="12px"
-               font-family="Helvetica, &quot;VP Default&quot;"
-               font-weight="400"
-               id="text24"><textPath
-                 xlink:href="#zOh.DDGACeQYjQF3"
-                 id="textPath24"><tspan
-                   xml:space="preserve"
-                   id="tspan24">Determine Midi Note</tspan></textPath></text>
-          </svg>
-        </switch>
-      </g>
     </g>
     <g
        shape-node=""
@@ -1234,17 +1176,17 @@ a { color: #007bff; }
                  d="M232.640625,369.4125 h58.71875" />
             </defs>
             <text
-               fill="rgb(0, 0, 0)"
+               fill="#000000"
                font-size="12px"
-               font-family="Helvetica, &quot;VP Default&quot;"
+               font-family="Helvetica, 'VP Default'"
                font-weight="400"
                id="text58"><textPath
                  xlink:href="#HOh.DDGACeQYjQF."
                  startOffset="50%"
                  text-anchor="middle"
-                 id="textPath58"><tspan
-                   xml:space="preserve"
-                   id="tspan58">Modulation</tspan></textPath></text>
+                 id="textPath58">Automation<tspan
+   xml:space="preserve"
+   id="tspan58" /></textPath></text>
           </svg>
         </switch>
       </g>
@@ -1652,59 +1594,6 @@ a { color: #007bff; }
     </g>
     <g
        shape-node=""
-       text-node=""
-       id="g89">
-      <g
-         cell-id="0MTmTOrP9secJRXI58nm-72"
-         transform="translate(-0.5 -0.5)"
-         id="g88">
-        <switch
-           cell-id="0MTmTOrP9secJRXI58nm-72"
-           id="switch87">
-          <foreignObject
-             cell-id="0MTmTOrP9secJRXI58nm-72"
-             style="overflow: visible; text-align: left;"
-             pointer-events="none"
-             width="100%"
-             height="100%"
-             requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-            <xhtml:div
-               style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 54px; height: 1px; padding-top: 257px; margin-left: 467px;">
-              <xhtml:div
-                 style="box-sizing: border-box; font-size: 0; text-align: center; ">
-                <xhtml:div
-                   ani=""
-                   style="display: inline-block; font-size: 12px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; word-break: break-word; white-space: normal; word-wrap: normal; ">filtered data</xhtml:div>
-              </xhtml:div>
-            </xhtml:div>
-          </foreignObject>
-          <svg
-             width="100%"
-             height="100%"
-             version="1.1"
-             id="svg87">
-            <defs
-               id="defs87">
-              <path
-                 id="3Oh.DDGACeQYjQGC"
-                 d="M467,269.6 h54 M467,284 h54" />
-            </defs>
-            <text
-               fill="rgb(0, 0, 0)"
-               font-size="12px"
-               font-family="Helvetica, &quot;VP Default&quot;"
-               font-weight="400"
-               id="text87"><textPath
-                 xlink:href="#3Oh.DDGACeQYjQGC"
-                 id="textPath87"><tspan
-                   xml:space="preserve"
-                   id="tspan87">filtered data</tspan></textPath></text>
-          </svg>
-        </switch>
-      </g>
-    </g>
-    <g
-       shape-node=""
        id="g90">
       <rect
          cell-id="0MTmTOrP9secJRXI58nm-73"
@@ -1716,59 +1605,6 @@ a { color: #007bff; }
          stroke="none"
          pointer-events="all"
          id="rect89" />
-    </g>
-    <g
-       shape-node=""
-       text-node=""
-       id="g92">
-      <g
-         cell-id="0MTmTOrP9secJRXI58nm-73"
-         transform="translate(-0.5 -0.5)"
-         id="g91">
-        <switch
-           cell-id="0MTmTOrP9secJRXI58nm-73"
-           id="switch90">
-          <foreignObject
-             cell-id="0MTmTOrP9secJRXI58nm-73"
-             style="overflow: visible; text-align: left;"
-             pointer-events="none"
-             width="100%"
-             height="100%"
-             requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-            <xhtml:div
-               style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 54px; height: 1px; padding-top: 193px; margin-left: 342px;">
-              <xhtml:div
-                 style="box-sizing: border-box; font-size: 0; text-align: center; ">
-                <xhtml:div
-                   ani=""
-                   style="display: inline-block; font-size: 12px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; word-break: break-word; white-space: normal; word-wrap: normal; ">filtered data</xhtml:div>
-              </xhtml:div>
-            </xhtml:div>
-          </foreignObject>
-          <svg
-             width="100%"
-             height="100%"
-             version="1.1"
-             id="svg90">
-            <defs
-               id="defs90">
-              <path
-                 id="POh.DDGACeQYjQGD"
-                 d="M342,205.6 h54 M342,220 h54" />
-            </defs>
-            <text
-               fill="rgb(0, 0, 0)"
-               font-size="12px"
-               font-family="Helvetica, &quot;VP Default&quot;"
-               font-weight="400"
-               id="text90"><textPath
-                 xlink:href="#POh.DDGACeQYjQGD"
-                 id="textPath90"><tspan
-                   xml:space="preserve"
-                   id="tspan90">filtered data</tspan></textPath></text>
-          </svg>
-        </switch>
-      </g>
     </g>
     <g
        shape-node=""
@@ -1786,59 +1622,6 @@ a { color: #007bff; }
     </g>
     <g
        shape-node=""
-       text-node=""
-       id="g95">
-      <g
-         cell-id="0MTmTOrP9secJRXI58nm-74"
-         transform="translate(-0.5 -0.5)"
-         id="g94">
-        <switch
-           cell-id="0MTmTOrP9secJRXI58nm-74"
-           id="switch93">
-          <foreignObject
-             cell-id="0MTmTOrP9secJRXI58nm-74"
-             style="overflow: visible; text-align: left;"
-             pointer-events="none"
-             width="100%"
-             height="100%"
-             requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-            <xhtml:div
-               style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 54px; height: 1px; padding-top: 419px; margin-left: 467px;">
-              <xhtml:div
-                 style="box-sizing: border-box; font-size: 0; text-align: center; ">
-                <xhtml:div
-                   ani=""
-                   style="display: inline-block; font-size: 12px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; word-break: break-word; white-space: normal; word-wrap: normal; ">slider states</xhtml:div>
-              </xhtml:div>
-            </xhtml:div>
-          </foreignObject>
-          <svg
-             width="100%"
-             height="100%"
-             version="1.1"
-             id="svg93">
-            <defs
-               id="defs93">
-              <path
-                 id="POh.DDGACeQYjQGE"
-                 d="M467,431.6 h54 M467,446 h54" />
-            </defs>
-            <text
-               fill="rgb(0, 0, 0)"
-               font-size="12px"
-               font-family="Helvetica, &quot;VP Default&quot;"
-               font-weight="400"
-               id="text93"><textPath
-                 xlink:href="#POh.DDGACeQYjQGE"
-                 id="textPath93"><tspan
-                   xml:space="preserve"
-                   id="tspan93">slider states</tspan></textPath></text>
-          </svg>
-        </switch>
-      </g>
-    </g>
-    <g
-       shape-node=""
        id="g96">
       <rect
          cell-id="0MTmTOrP9secJRXI58nm-75"
@@ -1853,59 +1636,6 @@ a { color: #007bff; }
     </g>
     <g
        shape-node=""
-       text-node=""
-       id="g98">
-      <g
-         cell-id="0MTmTOrP9secJRXI58nm-75"
-         transform="translate(-0.5 -0.5)"
-         id="g97">
-        <switch
-           cell-id="0MTmTOrP9secJRXI58nm-75"
-           id="switch96">
-          <foreignObject
-             cell-id="0MTmTOrP9secJRXI58nm-75"
-             style="overflow: visible; text-align: left;"
-             pointer-events="none"
-             width="100%"
-             height="100%"
-             requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-            <xhtml:div
-               style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 54px; height: 1px; padding-top: 530px; margin-left: 317px;">
-              <xhtml:div
-                 style="box-sizing: border-box; font-size: 0; text-align: center; ">
-                <xhtml:div
-                   ani=""
-                   style="display: inline-block; font-size: 12px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; word-break: break-word; white-space: normal; word-wrap: normal; ">MIDI message</xhtml:div>
-              </xhtml:div>
-            </xhtml:div>
-          </foreignObject>
-          <svg
-             width="100%"
-             height="100%"
-             version="1.1"
-             id="svg96">
-            <defs
-               id="defs96">
-              <path
-                 id="vOh.DDGACeQYjQGF"
-                 d="M317,542.6 h54 M317,557 h54" />
-            </defs>
-            <text
-               fill="rgb(0, 0, 0)"
-               font-size="12px"
-               font-family="Helvetica, &quot;VP Default&quot;"
-               font-weight="400"
-               id="text96"><textPath
-                 xlink:href="#vOh.DDGACeQYjQGF"
-                 id="textPath96"><tspan
-                   xml:space="preserve"
-                   id="tspan96">MIDI message</tspan></textPath></text>
-          </svg>
-        </switch>
-      </g>
-    </g>
-    <g
-       shape-node=""
        id="g99">
       <rect
          cell-id="0MTmTOrP9secJRXI58nm-76"
@@ -1917,59 +1647,6 @@ a { color: #007bff; }
          stroke="none"
          pointer-events="all"
          id="rect98" />
-    </g>
-    <g
-       shape-node=""
-       text-node=""
-       id="g101">
-      <g
-         cell-id="0MTmTOrP9secJRXI58nm-76"
-         transform="translate(-0.5 -0.5)"
-         id="g100">
-        <switch
-           cell-id="0MTmTOrP9secJRXI58nm-76"
-           id="switch99">
-          <foreignObject
-             cell-id="0MTmTOrP9secJRXI58nm-76"
-             style="overflow: visible; text-align: left;"
-             pointer-events="none"
-             width="100%"
-             height="100%"
-             requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-            <xhtml:div
-               style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 54px; height: 1px; padding-top: 377px; margin-left: 136px;">
-              <xhtml:div
-                 style="box-sizing: border-box; font-size: 0; text-align: center; ">
-                <xhtml:div
-                   ani=""
-                   style="display: inline-block; font-size: 12px; font-family: &quot;Helvetica&quot;, &quot;VP Default&quot;; color: #000000; line-height: 1.2; pointer-events: all; word-break: break-word; white-space: normal; word-wrap: normal; ">MIDI message</xhtml:div>
-              </xhtml:div>
-            </xhtml:div>
-          </foreignObject>
-          <svg
-             width="100%"
-             height="100%"
-             version="1.1"
-             id="svg99">
-            <defs
-               id="defs99">
-              <path
-                 id="vOh.DDGACeQYjQGG"
-                 d="M136,389.6 h54 M136,404 h54" />
-            </defs>
-            <text
-               fill="rgb(0, 0, 0)"
-               font-size="12px"
-               font-family="Helvetica, &quot;VP Default&quot;"
-               font-weight="400"
-               id="text99"><textPath
-                 xlink:href="#vOh.DDGACeQYjQGG"
-                 id="textPath99"><tspan
-                   xml:space="preserve"
-                   id="tspan99">MIDI message</tspan></textPath></text>
-          </svg>
-        </switch>
-      </g>
     </g>
     <g
        shape-node=""
@@ -2211,6 +1888,137 @@ a { color: #007bff; }
          pointer-events="all"
          id="path124" />
     </g>
+    <text
+       xml:space="preserve"
+       transform="translate(-235.44641,-10.895859)"
+       id="text768"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;white-space:pre;shape-inside:url(#rect770);display:inline;fill:#ffffff;stroke-width:1.33333"
+       x="19.368164"
+       y="0"><tspan
+         x="592.65625"
+         y="211.79538"
+         id="tspan3390"><tspan
+           style="text-align:center;text-anchor:middle;fill:#000000"
+           id="tspan3388">Filtered
+</tspan></tspan><tspan
+         x="600.98535"
+         y="226.79538"
+         id="tspan3394"><tspan
+           style="text-align:center;text-anchor:middle;fill:#000000"
+           id="tspan3392">data</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="translate(-117.68573,51.949335)"
+       id="text768-0"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;white-space:pre;shape-inside:url(#rect770-8);display:inline;fill:#ffffff;stroke-width:1.33333"
+       x="19.368164"
+       y="0"><tspan
+         x="592.65625"
+         y="211.79538"
+         id="tspan3398"><tspan
+           style="text-align:center;text-anchor:middle;fill:#000000"
+           id="tspan3396">Filtered
+</tspan></tspan><tspan
+         x="600.98535"
+         y="226.79538"
+         id="tspan3402"><tspan
+           style="text-align:center;text-anchor:middle;fill:#000000"
+           id="tspan3400">data</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="translate(-123.23019,216.89697)"
+       id="text768-0-3"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;white-space:pre;shape-inside:url(#rect770-8-5);display:inline;fill:#ffffff;stroke-width:1.33333"
+       x="34.959961"
+       y="0"><tspan
+         x="597.32324"
+         y="211.79538"
+         id="tspan3406"><tspan
+           style="text-align:center;text-anchor:middle;fill:#000000"
+           id="tspan3404">Slider
+</tspan></tspan><tspan
+         x="596.65527"
+         y="226.79538"
+         id="tspan3410"><tspan
+           style="text-align:center;text-anchor:middle;fill:#000000"
+           id="tspan3408">states</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="translate(-270.05286,323.70102)"
+       id="text768-0-3-5"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;white-space:pre;shape-inside:url(#rect770-8-5-1);display:inline;fill:#ffffff;stroke-width:1.33333"
+       x="58.661133"
+       y="0"><tspan
+         x="599.99805"
+         y="211.79538"
+         id="tspan3414"><tspan
+           style="text-align:center;text-anchor:middle;fill:#000000"
+           id="tspan3412">MIDI
+</tspan></tspan><tspan
+         x="588.31738"
+         y="226.79538"
+         id="tspan3418"><tspan
+           style="text-align:center;text-anchor:middle;fill:#000000"
+           id="tspan3416">message</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="translate(-449.055,173.42809)"
+       id="text768-0-3-5-7"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;white-space:pre;shape-inside:url(#rect770-8-5-1-3);display:inline;fill:#ffffff;stroke-width:1.33333"
+       x="58.661133"
+       y="0"><tspan
+         x="599.99805"
+         y="211.79538"
+         id="tspan3422"><tspan
+           style="text-align:center;text-anchor:middle;fill:#000000"
+           id="tspan3420">MIDI
+</tspan></tspan><tspan
+         x="588.31738"
+         y="226.79538"
+         id="tspan3426"><tspan
+           style="text-align:center;text-anchor:middle;fill:#000000"
+           id="tspan3424">message</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="translate(-144.80286,305.80203)"
+       id="text768-0-3-5-7-9"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;white-space:pre;shape-inside:url(#rect770-8-5-1-3-9);display:inline;fill:#ffffff;stroke-width:1.33333"
+       x="58.661133"
+       y="0"><tspan
+         x="584.98633"
+         y="211.79538"
+         id="tspan3430"><tspan
+           style="text-align:center;text-anchor:middle;fill:#000000"
+           id="tspan3428">Determine
+</tspan></tspan><tspan
+         x="585.65723"
+         y="226.79538"
+         id="tspan3434"><tspan
+           style="text-align:center;text-anchor:middle;fill:#000000"
+           id="tspan3432">MIDI Note</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="translate(-144.87024,137.88844)"
+       id="text768-0-3-5-7-9-4"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;white-space:pre;shape-inside:url(#rect770-8-5-1-3-9-3);display:inline;fill:#ffffff;stroke-width:1.33333"
+       x="58.661133"
+       y="0"><tspan
+         x="584.98633"
+         y="211.79538"
+         id="tspan3438"><tspan
+           style="text-align:center;text-anchor:middle;fill:#000000"
+           id="tspan3436">Determine
+</tspan></tspan><tspan
+         x="578.64648"
+         y="226.79538"
+         id="tspan3442"><tspan
+           style="text-align:center;text-anchor:middle;fill:#000000"
+           id="tspan3440">Slider States</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="translate(-0.5,-0.5)"
+       id="text1035"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;white-space:pre;shape-inside:url(#rect1037);display:inline;fill:#000000;stroke-width:1.33333" />
   </g>
   <switch
      id="switch126">

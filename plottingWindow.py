@@ -77,7 +77,7 @@ class RealtimePlotWindow:
         except ZeroDivisionError:
             actualSamplingRate = None
         
-        self.start = time.time()
+        self.start = self.end
 
         # update the legend to display the sampling rate
         if not actualSamplingRate == None:
