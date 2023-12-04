@@ -8,7 +8,7 @@
    width="460.8pt"
    id="svg99"
    sodipodi:docname="freqPlotAnnotated.svg"
-   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -26,18 +26,21 @@
      inkscape:document-units="pt"
      inkscape:zoom="1.781684"
      inkscape:cx="307.01292"
-     inkscape:cy="230.4"
-     inkscape:window-width="1920"
-     inkscape:window-height="1017"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:cy="230.68064"
+     inkscape:window-width="1858"
+     inkscape:window-height="1057"
+     inkscape:window-x="54"
+     inkscape:window-y="94"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg99" />
+     inkscape:current-layer="svg99"
+     showgrid="false" />
   <defs
      id="defs1">
     <style
        type="text/css"
-       id="style1">&#10;*{stroke-linecap:butt;stroke-linejoin:round;}&#10;  </style>
+       id="style1">
+*{stroke-linecap:butt;stroke-linejoin:round;}
+  </style>
   </defs>
   <g
      id="figure_1">
@@ -1108,13 +1111,13 @@
   <text
      xml:space="preserve"
      style="font-size:9px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round"
-     x="325.89355"
+     x="320.84216"
      y="23.486437"
      id="text100-7"><tspan
        sodipodi:role="line"
        id="tspan100-9"
        style="fill:#000000;stroke-width:5"
-       x="325.89355"
+       x="320.84216"
        y="23.486437">5Hz - 50 Hz</tspan></text>
   <defs
      id="defs99">
@@ -1130,7 +1133,7 @@
   </defs>
   <path
      style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-dasharray:none"
-     d="m 291.34422,37.561142 c 0,0 0,-4.306132 31.53915,-4.306132 31.53918,0 30.28244,-4.34858 30.28244,-4.34858 0,0 0,4.263685 31.53916,4.263685 31.53917,0 29.07516,4.306132 29.07516,4.306132"
+     d="m 291.308,37.587343 c 0,0 0,-4.331229 27.65556,-4.331229 27.65557,0 26.55358,-4.373925 26.55358,-4.373925 0,0 0,4.288535 27.65556,4.288535 27.65557,0 25.49497,4.331229 25.49497,4.331229"
      id="path101"
      sodipodi:nodetypes="cscsc" />
 </svg>

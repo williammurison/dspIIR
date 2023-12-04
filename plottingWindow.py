@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 import time
 
-'''credit to bernd porr'''
+'''Based on code written by Bernd Porr'''
 
 # Creates a scrolling data display
 class RealtimePlotWindow:
