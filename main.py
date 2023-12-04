@@ -19,10 +19,10 @@ automationThreshold = 0.7
 
 # Create a plotting window for each analog in, the final string argument
 # is the title and name to save the fig as so don't use and slashes
-# plot0 = RealtimePlotWindow(onThreshold, automationThreshold, 'indexPlot')
-# plot1 = RealtimePlotWindow(onThreshold, automationThreshold, 'middlePlot')
-# plot2 = RealtimePlotWindow(onThreshold, automationThreshold, 'ringPlot')
-# plot3 = RealtimePlotWindow(onThreshold, automationThreshold, 'pinkyPlot')
+plot0 = RealtimePlotWindow(onThreshold, automationThreshold, 'indexPlot')
+plot1 = RealtimePlotWindow(onThreshold, automationThreshold, 'middlePlot')
+plot2 = RealtimePlotWindow(onThreshold, automationThreshold, 'ringPlot')
+plot3 = RealtimePlotWindow(onThreshold, automationThreshold, 'pinkyPlot')
 
 # resolution of monitors for putting the plots in nice places
 resolutionX = 1920
@@ -35,10 +35,10 @@ figHeight = int(resolutionY / 2)
 pad = 50
 
 # one plot per quadrant of the screen, only works on windows sadly
-plot0.fig.canvas.manager.window.setGeometry(int(pad/2), int(pad/2), figWidth - pad, figHeight - pad)
-plot1.fig.canvas.manager.window.setGeometry(figWidth + int(pad/2), int(pad/2), figWidth - pad, figHeight - pad)
-plot2.fig.canvas.manager.window.setGeometry(int(pad/2), figHeight + int(pad/2), figWidth - pad, figHeight - pad)
-plot3.fig.canvas.manager.window.setGeometry(figWidth + int(pad/2), figHeight + int(pad/2), figWidth - pad, figHeight - pad)
+# plot0.fig.canvas.manager.window.setGeometry(int(pad/2), int(pad/2), figWidth - pad, figHeight - pad)
+# plot1.fig.canvas.manager.window.setGeometry(figWidth + int(pad/2), int(pad/2), figWidth - pad, figHeight - pad)
+# plot2.fig.canvas.manager.window.setGeometry(int(pad/2), figHeight + int(pad/2), figWidth - pad, figHeight - pad)
+# plot3.fig.canvas.manager.window.setGeometry(figWidth + int(pad/2), figHeight + int(pad/2), figWidth - pad, figHeight - pad)
 
 # max sampling rate: 1000Hz
 samplingRate = 100
